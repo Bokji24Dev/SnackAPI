@@ -1,0 +1,26 @@
+{
+  "name": "snack-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Bokji24Dev/SnackAPI",
+  "author": "Mineru98 <rmstjr1030@naver.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "koa": "^2.16.0",
+    "koa-bodyparser": "^4.4.1",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^13.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "babel-loader": "^9.2.1"
+  }
+}
