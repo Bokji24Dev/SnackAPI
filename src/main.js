@@ -2,6 +2,8 @@ import Koa from 'koa';
 import Router from '@koa/router';
 import sqlite3 from 'sqlite3';
 import { promisify } from 'util';
+import cors from '@koa/cors';
+
 
 const app = new Koa();
 const router = new Router();
@@ -125,6 +127,10 @@ router.get('/:webtoon_id/episodes/:id', async (ctx) => {
 
 
 // 미들웨어 설정
+app.use(cors({
+  origin: 'http://localhost:61706',
+  credentials: true // 필요 시
+}));
 app.use(router.routes());
 app.use(router.allowedMethods());
 
